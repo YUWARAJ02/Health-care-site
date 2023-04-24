@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATASET</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/head.js') }}"></script>
+    <my-head-tag></my-head-tag>
+ </head>
+ <body>
+  <nav-bar></nav-bar>
+    
+
+  
+    <div class="data">
+    <div class="block">
+      <div class="card">
+        <h1>Heart Disease</h1>
+        <p class="price">Dataset</p> 
+        <button onclick="window.open('https://lookerstudio.google.com/embed/reporting/801a417b-42ec-4bba-bfa2-2442365b2554/page/90bMD', '_blank')">Dataset Visualization</button>
+
+          <a href="/download_file?filename=heart_data.xlsx">
+            <button>Download</button>    
+        </a>       
+      
+      </div>
+    </div>
+    <div class="block">
+      <div class="card">
+        <h1>Kidney Disease</h1>
+        <p class="price">Dataset</p><button id="fullscreen-button"> Dataset Visualization</button>
+        <a href="/download_file?filename=kidney_data.xlsx">
+            <button>Download</button>
+      </a>
+      
+      </div>
+    </div>
+    <div class="block">
+      <div class="card">
+        <h1>Common Disease</h1>
+        <p class="price">Dataset</p><button id="fullscreen-button"> Dataset Visualization</button>
+        <a href="/download_file?filename=common_disease_data.csv">
+            <button>Download</button>
+      </a>
+      
+      </div>
+    </div>
+    </div>
+    
+ </body>
+</html>

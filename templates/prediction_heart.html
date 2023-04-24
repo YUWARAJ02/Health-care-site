@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script src="{{ url_for('static', filename='js/head.js') }}"></script>
+    <script >
+       function check() {
+        document.getElementById('prediction').innerHTML='';
+       }         
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <my-head-tag></my-head-tag>
+</head>
+<body> 
+    <nav-bar></nav-bar><br/>&nbsp;&nbsp;
+    <h2> Enter the mentioned values to check heart</h2>
+    
+    <form class="container" action="/heart_predict" method="post">
+        <div class="tab" align="center">
+        <table>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr>
+        <tr><td>        
+        <label for="age">Age : </label></td><td>
+        <input id="age" type="number" name="age" required></td></tr> 
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label>Gender : </label></td><td>
+                <select name="Gender" id="anemia">
+                    <option for="Gender" value="0">MALE
+                    <option for="Gender" value="1">FEMALE                    
+                </select>
+        </td></tr>  
+        <tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td>
+            <label>Chest pain type : </label></td><td>
+                <select name="Chest pain type" id="CRD">
+                    <option for ="Chest pain type" value="3">Normal
+                    <option for ="Chest pain type" value="0">Angina
+                    <option for ="Chest pain type" value="1">Asymptomatic
+                    <option for ="Chest pain type" value="2">Abnormal
+                </select></td></tr>      
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>  
+                    <label for="Resting blood pressure">Resting blood pressure : </label></td><td>
+                        <input id="Resting blood pressure" type="number" name="Resting blood pressure" placeholder="in (mm hg)" required> </td></tr>       
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>      
+        <label for="Cholesterol">Cholesterol : </label></td><td>
+        <input id="Cholesterol" type="number" name="Cholesterol" placeholder="in (mg/dl)" required></td></tr>   
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label>Fasting blood sugar : </label></td><td>
+            <select name="Fasting blood sugar" id="Fasting blood sugar">
+                <option for ="Fasting blood sugar" value="1">Higher than 120mg/dl
+                <option for ="Fasting blood sugar" value="0">Lower than 120mg/dl
+        <tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td>
+
+            <label for="Maximum heart rate achieved :">Maximum heart rate achieved : </label></td><td>
+                <input id="Maximum heart rate achieved :" type="number" name="Maximum heart rate achieved :" placeholder="in bpm" required> </td></tr>       
+                
+        </td></tr>              
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label for="ST/Heart rate depression :">ST/Heart rate depression : </label></td><td>
+                <input id="ST/Heart rate depression :" type="number" name="ST/Heart rate depression :" placeholder="" required> </td></tr>       
+                
+        </td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label>Slope : </label></td><td>
+                <select name="Slope" id="Slope">
+                    <option for="Slope" value="0">0
+                    <option for="Slope" value="1">1
+                    <option for="Slope" value="2">2
+                </select>
+        </td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label>Number of major vessels colored by flouroscopy : </label></td><td>
+                <select name="ca" id="ca">
+                    <option for="ca" value="0">0
+                    <option for="ca" value="1">1
+                    <option for="ca" value="2">2
+                    <option for="ca" value="3">3
+                    <option for="ca" value="4">4
+                </select>
+        </td></tr>        
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+            <label>Thalassemia(blood disorder) : </label></td><td>
+                <select name="thal" id="thal">
+                    <option for="thal" value="0">NULL
+                    <option for="thal" value="1">Fixed defect
+                    <option for="thal" value="2">Normal blood flow
+                    <option for="thal" value="3">Reversible defect
+                </select>
+        </td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr><td>
+        <input type="submit" value="submit"></td><td>
+        <input type="reset" value="clear" onclick="check()">
+        </td></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        </table>
+        
+    
+    </div>
+        
+    </form>
+    
+    <div align="center" class="hidden">
+        <h2 id="prediction">{{pred}}</h2>
+    </div>
+</body>
+</html>

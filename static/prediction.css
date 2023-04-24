@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: 
+    linear-gradient(rgba(17, 13, 13, 0.527),
+    rgba(80, 51, 51, 0.5)),
+    url('index_image.jpg');  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    background-size: cover; 
+    font-display: #080808; 
+    
+  }
+  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: rgb(211, 142, 142);
+    font-size: 35px;
+    text-align: center;
+    position: flex;
+  }
+  .container {
+    text-align: center;
+    position: flex;  
+    
+    
+  }
+  input {
+    padding: 5px;
+    background-color: transparent;
+    border-color: rgb(10, 10, 10);
+    font-size: 20px;
+    color: black;
+    display: flex;
+    text-align: center;
+  }
+  
+  label {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: black;
+    
+    font-size: 25px;
+    text-align: left;
+    
+  }
+  
+  @media screen {
+    label ,.d1{
+      
+      position: flex;
+      
+    }
+  }
+  .tab {
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: azure;
+    
+      
+  }
+  input[type=submit], input[type=reset] {
+    padding: 10px;
+  }
+
+  a {
+    color: azure;
+  }
+  a:hover {
+    color: blueviolet;
+  }

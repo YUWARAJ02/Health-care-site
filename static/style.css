@@ -1,0 +1,53 @@
+/* Global styles */
+body {
+    margin: 0;
+    
+    padding: 0;
+}
+
+#google_translate_element {
+    background-color: black;
+}
+
+.glow {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    position: relative;
+    font-size: 3vmin;
+    
+    color: rgb(35, 35, 112);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+
+    to {
+        text-shadow: 0 0 20px rgb(64, 158, 247), 0 0 30px #134783,
+            0 0 40px #073674;
+    }
+}
+
+/* .glow h3 {
+    font-size: 4vmin;font-weight: bolder;
+} */
+
+
+.gif1 {
+    margin-left: 20px;
+    width: 30%;
+    /* float: left; */
+    display:inline-block;
+}
+
+.gif2 {
+    margin-right: 20px;
+    width: 30%;
+    float: right; 
+    
+    
+}
+
+table {
+    border-radius: 70px;
+    border-color: black;
+}

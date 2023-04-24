@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="feedback-box">
+        <h2>Feedback</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea><br>
+        
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <style>
+        .feedback-box {
+  margin-left: 375px; ;
+  border: 30px solid #2193f1;
+  padding: 20px 40px;
+  width: 30%;
+  border-radius: 40px;
+  height: 300px;
+  
+}
+
+.feedback-box h2 {
+    text-align: center;
+  margin-top: 0;
+}
+
+.feedback-box form label {
+    margin-left: 30px;
+  
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-box form input,
+.feedback-box form textarea {
+    margin-left: 30px;
+  align-content: center;
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.feedback-box form button {
+    margin-left: 30px;
+    position: fixed;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+      </style>
+
+
+</body>
+</html>
